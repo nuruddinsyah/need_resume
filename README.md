@@ -1,6 +1,6 @@
 # Need Resume
 
-Need Resume is a package to implement onResume (Android)/viewDidAppear (iOS) functionality on Stateful widget.
+Need Resume is a package to implement onResume (Android)/viewDidAppear (iOS) functionality on a Stateful widget (this is onResume for every screen).
 
 ## Quick Usage
 
@@ -12,7 +12,7 @@ Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  need_resume: ^1.0.1
+  need_resume: ^1.0.1+1
 ```
 
 ## Example
