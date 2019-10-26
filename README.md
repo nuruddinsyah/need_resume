@@ -4,7 +4,7 @@ Need Resume is a package to implement onResume (Android)/viewDidAppear (iOS) fun
 
 ## Quick Usage
 
-Add `with NeedResume` to your `State<MyWidget>` class and then implement the `void onResume()` abstract method. Call `prepareResume() inside your `build()` method and call `needResume()` after you push another screen.
+Add `with NeedResume` to your `State<MyWidget>` class and then implement the `void onResume()` abstract method. Call `prepareResume()` inside your `build()` method and call `needResume()` after you push another screen.
 
 ## Installation
 
