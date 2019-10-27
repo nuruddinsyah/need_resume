@@ -1,6 +1,6 @@
 name: need_resume
-description: A package to implement onResume (Android)/viewDidAppear (iOS) functionality on Stateful widget.
-version: 1.0.1
+description: A package to implement onResume (Android)/viewDidAppear (iOS) functionality on a Stateful widget (this is onResume for every screen).
+version: 1.0.2
 author: Muhammad Faruq Nuruddinsyah <faruq.nuruddinsyah@gmail.com>
 homepage: https://github.com/nuruddinsyah/need_resume
 maintainer: Muhammad Faruq Nuruddinsyah (@nuruddinsyah)

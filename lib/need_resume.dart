@@ -2,31 +2,45 @@
  ----------------------------------------------------------------------
   NeedResume - Simple package for onResume/viewDidAppear functionality
  ----------------------------------------------------------------------
-  Version: 1.0.0
+  Version: 1.0.2
  ----------------------------------------------------------------------
   By: Muhammad Faruq Nuruddinsyah
   Copyright 2019. All Rights Reserved.
  ----------------------------------------------------------------------
 */
 
-library need_resume;
+import 'package:flutter/material.dart';
+
+class Resume {
+    dynamic data;
+    String source;
+}
 
 abstract class NeedResume {
-    var resumed = false;
+    Resume resume = new Resume();
 
     /// Implement your code here
     void onResume();
 
-    /// Call this method from build()
-    void prepareResume() {
-        if (resumed) {
-            resumed = false;
+    /// This method is replacement of Navigator.push(), but fires onResume() after route popped
+    Future<T> push<T extends Object>(BuildContext context, Route<T> route, [String source]) {
+        return Navigator.of(context).push(route).then((value) {
+            resume.data = value;
+            resume.source = source;
+
             onResume();
-        }
+            return value;
+        });
     }
 
-    /// Call this method after you push another screen
-    void needResume() {
-        resumed = true;
+    /// This method is replacement of Navigator.pushNamed(), but fires onResume() after route popped
+    Future<T> pushNamed<T extends Object>(BuildContext context, String routeName, {Object arguments}) {
+        return Navigator.of(context).pushNamed<T>(routeName, arguments: arguments).then((value) {
+            resume.data = value;
+            resume.source = routeName;
+
+            onResume();
+            return value;
+        });
     }
 }

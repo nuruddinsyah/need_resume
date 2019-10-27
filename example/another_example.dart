@@ -21,15 +21,15 @@ class HomeScreen extends StatefulWidget {
 class HomeScreenState extends State<HomeScreen> with NeedResume {
     @override
     void onResume() {
-        // Implement your code inside here
-
-        print('HomeScreen is resumed!');
+        switch (resume.source) {
+            case 'another_screen':
+                print('Data from AnotherScreen: ${resume.data}');
+                break;
+        }
     }
 
     void goAnotherScreen() {
-        // Replace Navigator.push() or Navigator.pushNamed() with push() or pushNamed()
-
-        push(context, MaterialPageRoute(builder: (context) => AnotherScreen()));
+        push(context, MaterialPageRoute(builder: (context) => AnotherScreen()), 'another_screen');
     }
 
     @override
@@ -68,6 +68,6 @@ class AnotherScreenState extends State<AnotherScreen> {
     }
 
     void goBack() {
-        Navigator.pop(context);
+        Navigator.pop(context, 'Hello!');
     }
 }
