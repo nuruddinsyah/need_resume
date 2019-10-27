@@ -92,7 +92,7 @@ class AnotherScreenState extends State<AnotherScreen> {
 }
 ```
 
-How about to get back data from a screen? Just use `resume.data` and `resume.source`:
+How about to get data from a screen? Just use `resume.data` and `resume.source`:
 
 ```dart
 import 'package:flutter/material.dart';
