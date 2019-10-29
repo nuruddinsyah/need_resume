@@ -18,12 +18,26 @@ class HomeScreen extends StatefulWidget {
     HomeScreenState createState() => HomeScreenState();
 }
 
-class HomeScreenState extends State<HomeScreen> with NeedResume {
+class HomeScreenState extends ResumableState<HomeScreen> {
+    @override
+    void onReady() {
+        // Implement your code inside here
+
+        print('HomeScreen is ready!');
+    }
+
     @override
     void onResume() {
         // Implement your code inside here
 
         print('HomeScreen is resumed!');
+    }
+
+    @override
+    void onPause() {
+        // Implement your code inside here
+
+        print('HomeScreen is paused!');
     }
 
     void goAnotherScreen() {
@@ -52,7 +66,28 @@ class AnotherScreen extends StatefulWidget {
     AnotherScreenState createState() => AnotherScreenState();
 }
 
-class AnotherScreenState extends State<AnotherScreen> {
+class AnotherScreenState extends ResumableState<AnotherScreen> {
+    @override
+    void onReady() {
+        // Implement your code inside here
+
+        print('AnotherScreen is ready!');
+    }
+
+    @override
+    void onResume() {
+        // Implement your code inside here
+
+        print('AnotherScreen is resumed!');
+    }
+
+    @override
+    void onPause() {
+        // Implement your code inside here
+
+        print('AnotherScreen is paused!');
+    }
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(

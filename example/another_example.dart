@@ -18,7 +18,7 @@ class HomeScreen extends StatefulWidget {
     HomeScreenState createState() => HomeScreenState();
 }
 
-class HomeScreenState extends State<HomeScreen> with NeedResume {
+class HomeScreenState extends ResumableState<HomeScreen> {
     @override
     void onResume() {
         switch (resume.source) {
@@ -52,7 +52,7 @@ class AnotherScreen extends StatefulWidget {
     AnotherScreenState createState() => AnotherScreenState();
 }
 
-class AnotherScreenState extends State<AnotherScreen> {
+class AnotherScreenState extends ResumableState<AnotherScreen> {
     @override
     Widget build(BuildContext context) {
         return Scaffold(

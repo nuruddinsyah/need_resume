@@ -1,10 +1,10 @@
 # Need Resume
 
-Need Resume is a package to implement onResume (Android)/viewDidAppear (iOS) functionality on a Stateful widget (this is onResume for every screen).
+Need Resume is a package to implement onResume, onPause, onReady functionality on a Stateful widget (this is for every screen).
 
 ## Quick Usage
 
-Add `with NeedResume` to your `State<MyWidget>` class and then implement the `void onResume()` abstract method. Replace `Navigator.push()` or `Navigator.pushNamed()` with `push()` or `pushNamed()`
+Replace `State<MyWidget>` with `ResumableState<MyWidget>` and then implement the `void onResume()`, `void onPause()`, and/or `void onReady()` abstract method. Replace `Navigator.push()` or `Navigator.pushNamed()` with `push()` or `pushNamed()`
 
 ## Installation
 
@@ -12,7 +12,7 @@ Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  need_resume: ^1.0.2
+  need_resume: ^1.0.3
 ```
 
 ## Example
@@ -37,12 +37,26 @@ class HomeScreen extends StatefulWidget {
   HomeScreenState createState() => HomeScreenState();
 }
 
-class HomeScreenState extends State<HomeScreen> with NeedResume {
+class HomeScreenState extends ResumableState<HomeScreen> {
+  @override
+  void onReady() {
+    // Implement your code inside here
+
+    print('HomeScreen is ready!');
+  }
+
   @override
   void onResume() {
     // Implement your code inside here
 
     print('HomeScreen is resumed!');
+  }
+
+  @override
+  void onPause() {
+    // Implement your code inside here
+
+    print('HomeScreen is paused!');
   }
 
   void goAnotherScreen() {
@@ -71,7 +85,7 @@ class AnotherScreen extends StatefulWidget {
   AnotherScreenState createState() => AnotherScreenState();
 }
 
-class AnotherScreenState extends State<AnotherScreen> {
+class AnotherScreenState extends ResumableState<AnotherScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,7 +126,7 @@ class HomeScreen extends StatefulWidget {
   HomeScreenState createState() => HomeScreenState();
 }
 
-class HomeScreenState extends State<HomeScreen> with NeedResume {
+class HomeScreenState extends ResumableState<HomeScreen> {
   @override
   void onResume() {
     switch (resume.source) {
@@ -146,7 +160,7 @@ class AnotherScreen extends StatefulWidget {
   AnotherScreenState createState() => AnotherScreenState();
 }
 
-class AnotherScreenState extends State<AnotherScreen> {
+class AnotherScreenState extends ResumableState<AnotherScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+
+* Add `onPause()` and `onReady()` methods
+* `NeedResume` class is now deprecated, replaced with `ResumableState<T>` abstract class, see example for detail
+
 ## 1.0.2
 
 * Simplify onResume implementation
