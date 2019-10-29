@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3+2
+
+* Update test
+
+## 1.0.3+1
+
+* Update README.md
+
 ## 1.0.3
 
 * Add `onPause()` and `onReady()` methods

@@ -20,7 +20,7 @@ class MyWidget extends StatefulWidget {
     _MyWidgetState createState() => _MyWidgetState();
 }
 
-class _MyWidgetState extends State<MyWidget> with NeedResume {
+class _MyWidgetState extends ResumableState<MyWidget> {
     @override
     Widget build(BuildContext context) {
         return Container();
