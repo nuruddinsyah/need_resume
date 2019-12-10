@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+* Bug fixing on AppLifecycleState case clause
+
 ## 1.0.3+2
 
 * Update test

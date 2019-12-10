@@ -83,23 +83,14 @@ abstract class ResumableState<T extends StatefulWidget> extends State with Widge
 
     @override
     void didChangeAppLifecycleState(AppLifecycleState state) {
-        switch (state) {
-            case AppLifecycleState.inactive:
-                break;
-            case AppLifecycleState.paused:
-                if (!_isPaused) {
-                    onPause();
-                }
-
-                break;
-            case AppLifecycleState.resumed:
-                if (!_isPaused) {
-                    onResume();
-                }
-
-                break;
-            case AppLifecycleState.suspending:
-                break;
+        if (state == AppLifecycleState.paused) {
+            if (!_isPaused) {
+                onPause();
+            }
+        } else if (state == AppLifecycleState.resumed) {
+            if (!_isPaused) {
+                onResume();
+            }
         }
     }
 }
