@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.5+1
+
+* Update example
+
+## 1.0.5
+
+* Bug fixing on widget type cast. Thanks to Hoffmann Daniel (https://github.com/hdani9307)
+
 ## 1.0.4
 
 * Bug fixing on AppLifecycleState case clause

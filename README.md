@@ -16,7 +16,7 @@ Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  need_resume: ^1.0.4
+  need_resume: ^1.0.5+1
 ```
 
 ## Example
