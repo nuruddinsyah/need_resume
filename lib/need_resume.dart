@@ -16,7 +16,7 @@ class Resume {
     String source;
 }
 
-abstract class ResumableState<T extends StatefulWidget> extends State with WidgetsBindingObserver {
+abstract class ResumableState<T extends StatefulWidget> extends State<T> with WidgetsBindingObserver {
     Resume resume = new Resume();
     bool _isPaused = false;
 
