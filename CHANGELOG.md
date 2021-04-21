@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6
+
+* Migrate to null safety version
+
 ## 1.0.5+1
 
 * Update example

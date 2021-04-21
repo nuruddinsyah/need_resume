@@ -6,9 +6,12 @@ Need Resume is a package to implement onResume, onPause, onReady functionality o
 
 Replace `State<MyWidget>` with `ResumableState<MyWidget>` and then implement the `void onResume()`, `void onPause()`, and/or `void onReady()` abstract method. Replace `Navigator.push()` or `Navigator.pushNamed()` with `push()` or `pushNamed()`
 
-## Attention
+## Note
 
-`NeedResume` class is now deprecated, replaced with `ResumableState<T>` abstract class, please see example for detail
+need_resume 1.0.6 is null safety version. Please read the documentation for null safety information in [dart][dart-safe] or [flutter][flutter-safe].
+
+[flutter-safe]: https://flutter.dev/docs/null-safety
+[dart-safe]: https://dart.dev/null-safety
 
 ## Installation
 
@@ -16,7 +19,7 @@ Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  need_resume: ^1.0.5+1
+  need_resume: ^1.0.6
 ```
 
 ## Example
@@ -73,7 +76,7 @@ class HomeScreenState extends ResumableState<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go to Another Screen'),
           onPressed: () {
             goAnotherScreen();
@@ -94,7 +97,7 @@ class AnotherScreenState extends ResumableState<AnotherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go Back'),
           onPressed: () {
             goBack();
@@ -148,7 +151,7 @@ class HomeScreenState extends ResumableState<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go to Another Screen'),
           onPressed: () {
             goAnotherScreen();
@@ -169,7 +172,7 @@ class AnotherScreenState extends ResumableState<AnotherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go Back'),
           onPressed: () {
             goBack();

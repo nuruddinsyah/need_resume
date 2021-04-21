@@ -47,7 +47,7 @@ class HomeScreenState extends ResumableState<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go to Another Screen'),
           onPressed: () {
             goAnotherScreen();
@@ -89,7 +89,7 @@ class AnotherScreenState extends ResumableState<AnotherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go Back'),
           onPressed: () {
             goBack();
