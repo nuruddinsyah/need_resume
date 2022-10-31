@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.7+1
+
+* Update README.md
+
 ## 1.0.7
 
 * Remove warnings about `WidgetsBinding` when migrating to Flutter 3

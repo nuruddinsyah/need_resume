@@ -2,7 +2,7 @@
  --------------------------------------------------------------------------
   NeedResume - Simple package for onResume, onPause, onReady functionality
  --------------------------------------------------------------------------
-  Version: 1.0.7
+  Version: 1.0.7+1
  --------------------------------------------------------------------------
   By: Muhammad Faruq Nuruddinsyah
   Copyright 2019-2022. All Rights Reserved.

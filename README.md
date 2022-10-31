@@ -6,16 +6,13 @@ Need Resume is a package to implement onResume, onPause, onReady functionality o
 
 Replace `State<MyWidget>` with `ResumableState<MyWidget>` and then implement the `void onResume()`, `void onPause()`, and/or `void onReady()` abstract method. Replace `Navigator.push()` or `Navigator.pushNamed()` with `push()` or `pushNamed()`
 
-[flutter-safe]: https://flutter.dev/docs/null-safety
-[dart-safe]: https://dart.dev/null-safety
-
 ## Installation
 
 Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  need_resume: ^1.0.6
+  need_resume: ^1.0.7+1
 ```
 
 ## Example
