@@ -1,6 +1,6 @@
 name: need_resume
 description: A package to implement onResume, onPause, onReady functionality on a Stateful widget (this is for every screen).
-version: 1.0.6
+version: 1.0.7
 homepage: https://github.com/nuruddinsyah/need_resume
 maintainer: Muhammad Faruq Nuruddinsyah (@nuruddinsyah)
 

@@ -2,10 +2,10 @@
  --------------------------------------------------------------------------
   NeedResume - Simple package for onResume, onPause, onReady functionality
  --------------------------------------------------------------------------
-  Version: 1.0.6
+  Version: 1.0.7
  --------------------------------------------------------------------------
   By: Muhammad Faruq Nuruddinsyah
-  Copyright 2019-2021. All Rights Reserved.
+  Copyright 2019-2022. All Rights Reserved.
  --------------------------------------------------------------------------
 */
 
@@ -77,13 +77,13 @@ abstract class ResumableState<T extends StatefulWidget> extends State<T>
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance!.addObserver(this);
-    WidgetsBinding.instance!.addPostFrameCallback((_) => onReady());
+    _ambiguate(WidgetsBinding.instance)!.addObserver(this);
+    _ambiguate(WidgetsBinding.instance)!.addPostFrameCallback((_) => onReady());
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance!.removeObserver(this);
+    _ambiguate(WidgetsBinding.instance)!.removeObserver(this);
     super.dispose();
   }
 
@@ -98,5 +98,9 @@ abstract class ResumableState<T extends StatefulWidget> extends State<T>
         onResume();
       }
     }
+  }
+
+  T? _ambiguate<T>(T? value) {
+    return value;
   }
 }
